@@ -264,7 +264,10 @@ oc edit oauth cluster
 Delete the identity provider section.
 
 ---
-
+```bash
+Note:
+In HTPasswd-based authentication in Red Hat OpenShift, whenever users are added, removed, or updated in the htpasswd file, the corresponding Kubernetes secret must also be updated. OpenShift authentication uses the secret stored in the openshift-config namespace, not the local htpasswd file directly. After updating the secret, the authentication operator automatically detects the changes and applies them. 
+```
 # Summary
 
 In this setup:
